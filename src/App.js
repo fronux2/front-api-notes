@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NewNotes from './notas/NewNotes'
 
 function App() {
+
+  
+
+  const notes = [{id:1,
+                  important: true,
+                  content: 'Pagina de Notas'},
+                  {id:2, 
+                  important: false,
+                  content: 'Pagina de Notaas 2'}]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">      
+      <NewNotes notes={notes}></NewNotes>
     </div>
   );
 }
